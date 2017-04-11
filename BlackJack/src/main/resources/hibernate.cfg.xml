@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+
+	<!-- 配置方言 -->
+
+	<property name="hibernate.dialect">
+		org.hibernate.dialect.MySQLDialect
+	</property>
+
+
+	<!-- 配置 Jdbc 连接方式 -->
+
+	<property name="hibernate.connection.driver_class">
+		com.mysql.jdbc.Driver
+	</property>
+
+	<property name="hibernate.connection.url">
+		jdbc:mysql://192.168.1.101:3306/terrace1?characterEncoding=UTF8&amp;autoReconnect=true
+	</property>
+
+	<property name="hibernate.connection.username">root</property>
+	<property name="hibernate.connection.password">root</property>
+
+
+	<!-- Database connection settings -->
+
+
+	<!-- 使用 myeclipse 生成时务必注释下面 3 项，否则会引起 找不到 db.xml 错误 -->
+
+	<!-- <property name="hibernate.connection.provider_class"> -->
+	<!-- org.hibernate.connection.ProxoolConnectionProvider -->
+	<!-- </property> -->
+	<!-- <property name="hibernate.proxool.pool_alias">mysql</property> -->
+	<!-- <property name="hibernate.proxool.xml">db.xml</property> -->
+
+	<property name="hibernate.connection.provider_class">
+		org.hibernate.connection.C3P0ConnectionProvider
+	</property>
+
+
+	<!-- show_sql指定是否打印SQL语句 hibernate.format_sql -->
+
+	<property name="show_sql">flase</property>
+	<property name="format_sql">true</property>
+
+
+	<!-- 自动创建表选项 -->
+
+	<!-- <property name="hbm2ddl.auto">update</property> -->
+
+
+	<!-- SQL dialect -->
+	<!-- property name="dialect">net.sf.odinms.tools.MyDialect</property -->
+	<!-- 开启二级缓存 -->
+	<!-- property name="hibernate.cache.use_second_level_cache">true</property -->
+	<!-- 开启查询缓存 -->
+	<!-- property name="hibernate.cache.use_query_cache">true</property -->
+	<!-- 二级缓存区域名的前缀 -->
+	<!-- property name="hibernate.cache.region_prefix">h3test</property -->
+	<!-- 高速缓存提供程序 -->
+	<!-- property name="hibernate.cache.region.factory_class"> org.hibernate.cache.ehcache.EhCacheRegionFactory 
+		</property -->
+	<!-- 指定缓存配置文件位置 -->
+	<!-- property name="hibernate.cache.provider_configuration_file_resource_path"> 
+		ehcache.xml </property -->
+	<!-- 强制Hibernate以更人性化的格式将数据存入二级缓存 -->
+	<!-- property name="hibernate.cache.use_structured_entries">true</property -->
+	<!-- Hibernate将收集有助于性能调节的统计数据 -->
+	<!--<property name="hibernate.generate_statistics">true</property> -->
+
+	<mapping resource="org/server/core/model/Roominfo.hbm.xml" />
+	<mapping resource="org/server/core/model/SysSequence.hbm.xml" />
+	<mapping resource="org/server/core/model/Userbasicinfo.hbm.xml" />
+	<mapping class="org.server.core.model.custom.BlackjackOrderinfo" />
+
+
+
+
+
+
+</session-factory>
+</hibernate-configuration>

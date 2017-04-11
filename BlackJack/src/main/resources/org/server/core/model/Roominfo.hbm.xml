@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-7-10 15:37:20 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="org.server.core.model.Roominfo" table="roominfo" optimistic-lock="version">
+        <id name="roomId" type="int">
+            <column name="room_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="roomName" type="string">
+            <column name="room_name" length="32" not-null="true" />
+        </property>
+        <property name="roomDesc" type="string">
+            <column name="room_desc" length="32" not-null="true" />
+        </property>
+        <property name="gameId" type="int">
+            <column name="game_id" not-null="true" />
+        </property>
+        <property name="roomStatus" type="int">
+            <column name="room_status" not-null="true" />
+        </property>
+        <property name="gameCoin" type="java.lang.Double">
+            <column name="game_coin" precision="5" />
+        </property>
+        <property name="minRequire" type="java.lang.Double">
+            <column name="min_require" precision="9" />
+        </property>
+        <property name="bankerLimit" type="int">
+            <column name="banker_limit" not-null="true" />
+        </property>
+        <property name="roomTs" type="java.lang.Double">
+            <column name="room_ts" precision="3" />
+        </property>
+        <property name="roomOrder" type="java.lang.Integer">
+            <column name="room_order" />
+        </property>
+        <property name="maxLimit" type="java.lang.Double">
+            <column name="max_limit" precision="9">
+                <comment>&#215;&#238;&#184;&#223;&#207;&#222;&#182;&#238;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

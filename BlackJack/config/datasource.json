@@ -1,0 +1,9 @@
+{
+  "jdbc" : {
+    "driver": "oracle.jdbc.driver.OracleDriver",
+    "url": "jdbc:oracle:thin:@//127.0.0.1:1433/boss",
+    "user": "root",
+    "password": "",
+    "fixed_connection_size" : 12
+  }
+}

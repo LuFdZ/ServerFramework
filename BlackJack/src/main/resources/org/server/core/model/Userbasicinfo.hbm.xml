@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-7-10 15:37:20 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="org.server.core.model.Userbasicinfo" table="userbasicinfo" optimistic-lock="version">
+        <id name="userId" type="int">
+            <column name="user_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="userName" type="string">
+            <column name="user_name" length="32">
+                <comment>&#211;&#195;&#187;&#167;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="userPass" type="string">
+            <column name="user_pass" length="32">
+                <comment>&#211;&#195;&#187;&#167;&#195;&#220;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="32">
+                <comment>&#211;&#195;&#187;&#167;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="userLevel" type="string">
+            <column name="user_level" length="32">
+                <comment>&#211;&#195;&#187;&#167;&#188;&#182;&#177;&#240;</comment>
+            </column>
+        </property>
+        <property name="parentId" type="java.lang.Integer">
+            <column name="parent_id">
+                <comment>&#201;&#207;&#188;&#182;Id</comment>
+            </column>
+        </property>
+        <property name="bankCoin" type="java.lang.Double">
+            <column name="bank_coin" precision="8">
+                <comment>&#210;&#248;&#208;&#208;&#189;&#240;&#177;&#210;</comment>
+            </column>
+        </property>
+        <property name="userMoney" type="java.lang.Double">
+            <column name="user_money" precision="11">
+                <comment>&#211;&#195;&#187;&#167;&#189;&#240;&#177;&#210;</comment>
+            </column>
+        </property>
+        <property name="userFc" type="java.lang.Integer">
+            <column name="user_fc" />
+        </property>
+        <property name="regName" type="string">
+            <column name="reg_name" length="32">
+                <comment>&#215;&#162;&#178;&#225;&#208;&#213;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="secQuestion" type="string">
+            <column name="sec_question" length="32">
+                <comment>&#195;&#220;&#177;&#163;&#206;&#202;&#204;&#226;</comment>
+            </column>
+        </property>
+        <property name="secHint" type="string">
+            <column name="sec_hint" length="32">
+                <comment>&#195;&#220;&#177;&#163;&#204;&#225;&#202;&#190;</comment>
+            </column>
+        </property>
+        <property name="secAnswer" type="string">
+            <column name="sec_answer" length="32">
+                <comment>&#195;&#220;&#177;&#163;&#180;&#240;&#176;&#184;</comment>
+            </column>
+        </property>
+        <property name="secEmail" type="string">
+            <column name="sec_email" length="32">
+                <comment>&#176;&#178;&#200;&#171;&#211;&#202;&#207;&#228;</comment>
+            </column>
+        </property>
+        <property name="userGender" type="java.lang.Integer">
+            <column name="user_Gender">
+                <comment>&#208;&#212;&#177;&#240;1&#196;&#208;&#163;&#172;2&#197;&#174;</comment>
+            </column>
+        </property>
+        <property name="loginDate" type="timestamp">
+            <column name="login_date" length="19">
+                <comment>&#181;&#199;&#194;&#188;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="accessTimes" type="java.lang.Integer">
+            <column name="access_times">
+                <comment>&#181;&#199;&#194;&#188;&#180;&#206;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="loginIp" type="string">
+            <column name="login_ip" length="12">
+                <comment>&#181;&#199;&#194;&#188;ip</comment>
+            </column>
+        </property>
+        <property name="startDate" type="timestamp">
+            <column name="start_date" length="19">
+                <comment>&#215;&#162;&#178;&#225;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

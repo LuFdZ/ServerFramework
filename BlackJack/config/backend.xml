@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<BackendConfig>
+    <MasterServer>
+        <Address>localhost</Address>
+        <Port>7700</Port>
+    </MasterServer>
+    <!-- 服务挂载地址 -->
+    <ServerRMIAddress Port="7800">localhost</ServerRMIAddress>
+    <ServerKey>qwer789421</ServerKey>
+    
+    <!-- 自定义配置集合 -->
+
+		<CustomConfig>
+			<AuthUrl>http://127.0.0.1:9911/VerifyOnline.do</AuthUrl>
+		</CustomConfig>
+</BackendConfig>

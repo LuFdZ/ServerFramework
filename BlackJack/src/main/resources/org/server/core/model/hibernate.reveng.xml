@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="terrace1"/>
+  <table-filter match-name="gameinfo"/>
+  <table-filter match-name="syscodebook"/>
+  <table-filter match-name="blackjackorderinfo"/>
+  <table-filter match-name="userbasicinfo"/>
+  <table-filter match-name="sys_sequence"/>
+  <table-filter match-name="roominfo"/>
+</hibernate-reverse-engineering>

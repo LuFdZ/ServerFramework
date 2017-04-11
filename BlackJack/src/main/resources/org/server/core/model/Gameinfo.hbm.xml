@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-7-10 15:37:20 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="org.server.core.model.Gameinfo" table="gameinfo" optimistic-lock="version">
+        <id name="gameId" type="int">
+            <column name="game_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="gameName" type="string">
+            <column name="game_name" length="32" not-null="true" />
+        </property>
+        <property name="gameExec" type="string">
+            <column name="game_exec" length="32" not-null="true" />
+        </property>
+        <property name="gameStatus" type="int">
+            <column name="game_status" not-null="true" />
+        </property>
+        <property name="gameOrder" type="int">
+            <column name="game_order" not-null="true" />
+        </property>
+        <property name="gameType" type="java.lang.Integer">
+            <column name="game_type">
+                <comment>&#211;&#206;&#207;&#183;&#192;&#224;&#208;&#205; 1:&#197;&#198;&#192;&#224;&#163;&#172;2&#198;&#228;&#203;&#251;</comment>
+            </column>
+        </property>
+        <property name="gameTable" type="string">
+            <column name="game_table" length="32" not-null="true">
+                <comment>&#211;&#206;&#207;&#183;&#182;&#212;&#211;&#166;&#177;&#237;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

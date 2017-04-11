@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<FrontendConfig>
+    <MasterServer>
+        <Address>localhost</Address>
+        <Port>7700</Port>
+    </MasterServer>
+    <!-- 当前服务钥匙 -->
+    <ServerKey>abcd123456</ServerKey>
+    <FrontendPort>6500</FrontendPort>
+    <BackendServerAddress Port="7800">localhost</BackendServerAddress>  
+<TestConnectionTimer>10000</TestConnectionTimer>  </FrontendConfig>
